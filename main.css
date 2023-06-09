@@ -1,0 +1,63 @@
+nav a,
+nav a:visited {
+    color: white;
+    text-decoration: none;
+    background-color: #cfcfcf33;
+    color: white;
+    font-size: 25px;
+
+}
+
+body {
+    background-color: #333741;
+    color:white;
+}
+
+nav {
+    padding-top: 3rem;
+}
+
+a {
+    border: 1px solid #cfcfcf88;
+    padding: 1rem;
+    border-radius: 10%;
+
+
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+nav a:hover,
+button:hover {
+    background-color: #cfcfcf99;
+    color: #333741;
+
+    transition: .25s ease-in-out;
+}
+
+button {
+    padding: 1rem;
+    color: white;
+    background-color: #00000000;
+    font-size: large;
+    display: inline-flex;
+    justify-content: space-around;
+    gap: 10px;
+    border-radius: 10%;
+    margin: 1rem;
+   
+}
+div{
+    color:white;
+}

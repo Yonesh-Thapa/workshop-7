@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav>
+        <a href="search.html">Product Search</a>
+
+    </nav>
+    <h1>Product Details</h1>
+
+</body>
+<script>
+    const id = window.location.search.split("=")[1];
+    async function getDetails(id){
+       const response = await fetch("http://localhost:8081/api/products/" + id)
+        const data = await response.json();
+       
+       document.body.innerHTML += `
+        <h2><div style="min-width: 20vw; display:inline-block">Product Name:</div> ${data.productName}</h2>
+        <div style="min-width: 20vw; display:inline-block">Product Id: </div>${data.productId}<br>
+        <div style="min-width: 20vw; display:inline-block">Unit Price:</div> ${Number(data.unitPrice).toFixed(2)}<br>
+        <div style="min-width: 20vw; display:inline-block">Units In Stock:</div> ${data.unitsInStock}<br>
+        <div style="min-width: 20vw; display:inline-block">Supplier:</div> ${data.supplier}<br>
+        <div style="min-width: 20vw; display:inline-block">discontinued: </div>${data.discontinued ? "Yes" : "No"}<br>
+        
+        
+
+    `;
+
+    }
+    getDetails(id)
+</script>
